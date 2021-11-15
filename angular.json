@@ -123,9 +123,21 @@
               "devServerTarget": "angular12demo:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "angular12demo"
+  "defaultProject": "angular12demo",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
