@@ -1,0 +1,19 @@
+.nested-block {
+  zoom: 1;
+  &__element {
+    zoom: 1;
+    &--modifier {
+      zoom: 1;
+    }
+  }
+}
+
+.unnested-block {
+  zoom: 1;
+  @at-root #{&}__element {
+    zoom: 1;
+  }
+  @at-root #{&}--modifier {
+    zoom: 1;
+  }
+}
